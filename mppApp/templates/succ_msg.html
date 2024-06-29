@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+{% load static %}
+<div class="jumbotron">
+    <h1>Mobile Price Prediction </h1>
+    <div class="fieldWrapper">
+      <h2>For the values</h2>
+      <p>ppi:{{data_ppi}}</p>
+      <p>cpu_core:{{data_cpu_core}}</p>
+      <p>internal_mem:{{data_internal_mem}}</p>
+      <p>ram:{{data_ram}}</p>
+      <p>cpu_freq:{{data_cpu_freq}}</p>
+      <p>rearcam:{{data_rearcam}}</p>
+      <p>thickness:{{data_thickness}}</p>
+      <p>battery:{{data_battery}}</p>
+      <h2> The Price of the mobile for the above features is {{out}}</h2>
+      <!-- <br>
+      {% if out == 1 %}
+        <p>You <b>will have</b>  chronic Kidney Disease in the future: <b>Positive</b></p>
+      {% else %}
+        <p>You <b>will not</b> have  chronic Kidney Disease in the future:<b>Negetive</b></p>
+
+      {% endif %} -->
+
+    <a  href="{% url 'mppApp:mpp' %}">Mobile Prediction</a>
+    <br>
+</div>
+{% endblock %}
